@@ -13,4 +13,4 @@ jobs:
         uses: peter-evans/repository-dispatch@v3
         with:
           event-type: perror-test-event
-          client-payload: 'test'
+          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
